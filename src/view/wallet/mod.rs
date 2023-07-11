@@ -11,6 +11,7 @@
 
 mod component;
 mod pay;
+mod payto;
 mod view_model;
 mod widget;
 
@@ -39,6 +40,7 @@ pub enum Msg {
     Settings,
     Update(Vec<Signer>, BTreeSet<DescriptorClass>, ElectrumServer),
     Pay(pay::Msg),
+    PayTo(payto::Msg),
     Fiat(Fiat),
     Refresh,
     InvoiceAmountToggle(bool),
